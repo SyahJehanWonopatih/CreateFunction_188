@@ -1,4 +1,3 @@
-#no
 #No 2
 import math
 

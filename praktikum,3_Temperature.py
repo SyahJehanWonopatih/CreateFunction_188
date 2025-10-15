@@ -7,7 +7,7 @@ def convert_temperature(value, unit):
     else:
         raise ValueError("Unit must be 'C' or 'F'")
     
-print("======== convert temperature ========" )
+print(" convert temperature " )
 try: 
         input_temperature = float(input("enter the temperature value: "))
         unit = input("Enter temperature units ('C' for celcius and 'F' for Fahrenhit): ")
