@@ -7,19 +7,17 @@ def convert_temperature(value, unit):
     else:
         raise ValueError("Unit must be 'C' or 'F'")
     
-print("======= KONVERSI SUHU =======")
-try:
-    input_suhu = float(input("Masukkan nilai suhu: "))
-    unit = input("Masukkan satuan suhu ('C' untuk Celsius atau 'F' untuk Fahrenheit): ")
-    konversi = convert_temperature(input_suhu, unit)
-    if unit.upper() == 'C':
-        print(f"{input_suhu}°C = {konversi:.2f}°F")
-    elif unit.upper() == 'F':
-        print(f"{input_suhu}°F = {konversi:.2f}°C")
-    else:
-        print("Satuan tidak dikenal.")
+print(" convert temperature " )
+try: 
+        input_temperature = float(input("enter the temperature value: "))
+        unit = input("Enter temperature units ('C' for celcius and 'F' for Fahrenhit): ")
+        convert = convert_temperature(input_temperature, unit)
+        if unit.upper() == 'C':
+            print(f"{input_temperature}C = {convert: 2f} F")
+        elif unit.upper() == 'F':
+            print(f"{input_temperature} F = {convert:.2f} C")
+        else:
+            print("invalid option.")
 except ValueError as e:
-    print("Terjadi kesalahan:", e)
-
-
+        print("error", e)
 

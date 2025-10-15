@@ -5,6 +5,17 @@ def konversi_temperature(value, unit):
         return (value - 32) * 5/9
     else:
         raise ValueError("suhu tidak valid gunakan 'C' or 'F'")
-    print(konversi_suhu(200, 'C'))
-    print(konversi_suhu(38, 'F'))
     
+    print("======= KONVERSI SUHU =======")
+try:
+    input_suhu = float(input("Masukkan nilai suhu: "))
+    unit = input("Masukkan satuan suhu ('C' untuk Celsius atau 'F' untuk Fahrenheit): ")
+    konversi = konversi_temperature(input_suhu, unit)
+    if unit.upper() == 'C':
+        print(f"{input_suhu}°C = {konversi:.2f}°F")
+    elif unit.upper() == 'F':
+        print(f"{input_suhu}°F = {konversi:.2f}°C")
+    else:
+        print("Satuan tidak dikenal.")
+except ValueError as e:
+    print("Terjadi kesalahan:", e)
